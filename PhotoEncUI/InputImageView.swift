@@ -32,10 +32,6 @@ class InputImageView: UIView {
 		
 		self.selfViewShow = false
 		
-		let aSelector: Selector = #selector(removeSubview)
-		let tapGesture = UITapGestureRecognizer(target: self, action: aSelector)
-		self.addGestureRecognizer(tapGesture)
-		
 		buttonGallery = UIButton(frame: CGRect(x: 0, y: 0, width: self.frame.size.width/2, height: self.frame.size.height))
 		buttonGallery.setTitle("Gallery", for: UIControlState.normal)
 		buttonGallery.setTitleColor(.blue, for: UIControlState.normal)
@@ -54,25 +50,13 @@ class InputImageView: UIView {
 		fatalError("init(coder:) has not been implemented")
 	}
 
-	func removeSubview() {
-		print("Start remove subview")
-		if let viewWithTag = self.viewWithTag(100) {
-			viewWithTag.removeFromSuperview()
-			self.selfViewShow = false
-		} else {
-			print("No")
-		}
-	}
-	
 	
 	func chooseImageFromGallery(_ sender: UIButton) {
 		self.delegate?.sourceSelect(selectionSource: "Gallery")
-		removeSubview()
 	}
 	
 	func chooseImageFromCamera(_ sender: UIButton) {
 		self.delegate?.sourceSelect(selectionSource: "Camera")
-		removeSubview()
 	}
 	
 }

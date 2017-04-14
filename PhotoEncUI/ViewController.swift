@@ -89,6 +89,7 @@ class ViewController: UIViewController, UIScrollViewDelegate, selectFunctionDele
 				present(imagePicker, animated: true, completion: nil)
 			}
 		}
+		removeSubview()
 	}
 	
 	func removeSubview() {
@@ -108,6 +109,8 @@ class ViewController: UIViewController, UIScrollViewDelegate, selectFunctionDele
 			self.view.addSubview(testView)
 			testView.selfViewShow = true
 			print("Show Subview")
+		} else {
+			removeSubview()
 		}
 		
 	}
