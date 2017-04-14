@@ -9,21 +9,37 @@
 /* Begin PBXBuildFile section */
 		4A1F35DF1E3495A10069FEB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1F35DE1E3495A10069FEB2 /* AppDelegate.swift */; };
 		4A1F35E11E3495A10069FEB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1F35E01E3495A10069FEB2 /* ViewController.swift */; };
-		4A1F35E41E3495A10069FEB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A1F35E21E3495A10069FEB2 /* Main.storyboard */; };
 		4A1F35E71E3495A10069FEB2 /* PhotoEncUI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4A1F35E51E3495A10069FEB2 /* PhotoEncUI.xcdatamodeld */; };
 		4A1F35E91E3495A10069FEB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A1F35E81E3495A10069FEB2 /* Assets.xcassets */; };
 		4A1F35EC1E3495A10069FEB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A1F35EA1E3495A10069FEB2 /* LaunchScreen.storyboard */; };
+		4A2FB0311E3C93A700BDFC92 /* scrollImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2FB0301E3C93A700BDFC92 /* scrollImage.swift */; };
+		4A2FB0331E3E203B00BDFC92 /* FunctionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2FB0321E3E203B00BDFC92 /* FunctionViewController.swift */; };
+		4A51790A1E8BF85100CC2DFF /* InputImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5179091E8BF85100CC2DFF /* InputImageView.swift */; };
+		4A931CE11E7701E1006B37B0 /* functionListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A931CE01E7701E1006B37B0 /* functionListCell.swift */; };
+		4A931CE31E77090A006B37B0 /* DetailFunctionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A931CE21E77090A006B37B0 /* DetailFunctionViewController.swift */; };
+		4ABDD02A1E79855500701458 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ABDD0281E79855500701458 /* Main.storyboard */; };
+		4ABDD02D1E7A581E00701458 /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4ABDD02C1E7A581E00701458 /* OpenCVWrapper.mm */; };
+		4ABDD0311E7A59F700701458 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABDD0301E7A59F700701458 /* opencv2.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4A1F35DB1E3495A10069FEB2 /* PhotoEncUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoEncUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A1F35DE1E3495A10069FEB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A1F35E01E3495A10069FEB2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4A1F35E31E3495A10069FEB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4A1F35E61E3495A10069FEB2 /* PhotoEncUI.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PhotoEncUI.xcdatamodel; sourceTree = "<group>"; };
 		4A1F35E81E3495A10069FEB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A1F35EB1E3495A10069FEB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A1F35ED1E3495A10069FEB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A2FB0301E3C93A700BDFC92 /* scrollImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = scrollImage.swift; path = ../scrollImage.swift; sourceTree = "<group>"; };
+		4A2FB0321E3E203B00BDFC92 /* FunctionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionViewController.swift; sourceTree = "<group>"; };
+		4A5179091E8BF85100CC2DFF /* InputImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputImageView.swift; sourceTree = "<group>"; };
+		4A931CE01E7701E1006B37B0 /* functionListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = functionListCell.swift; sourceTree = "<group>"; };
+		4A931CE21E77090A006B37B0 /* DetailFunctionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailFunctionViewController.swift; sourceTree = "<group>"; };
+		4ABDD0291E79855500701458 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4ABDD02B1E7A581E00701458 /* PhotoEncUI-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhotoEncUI-Bridging-Header.h"; sourceTree = "<group>"; };
+		4ABDD02C1E7A581E00701458 /* OpenCVWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
+		4ABDD02E1E7A58DF00701458 /* OpenCVWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
+		4ABDD0301E7A59F700701458 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = PhotoEncUI/opencv2.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4ABDD0311E7A59F700701458 /* opencv2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +59,7 @@
 			children = (
 				4A1F35DD1E3495A10069FEB2 /* PhotoEncUI */,
 				4A1F35DC1E3495A10069FEB2 /* Products */,
+				4ABDD02F1E7A59F200701458 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +74,39 @@
 		4A1F35DD1E3495A10069FEB2 /* PhotoEncUI */ = {
 			isa = PBXGroup;
 			children = (
+				4ABDD0321E7A5BDE00701458 /* OpenCV */,
+				4A2FB0301E3C93A700BDFC92 /* scrollImage.swift */,
 				4A1F35DE1E3495A10069FEB2 /* AppDelegate.swift */,
+				4A5179091E8BF85100CC2DFF /* InputImageView.swift */,
 				4A1F35E01E3495A10069FEB2 /* ViewController.swift */,
-				4A1F35E21E3495A10069FEB2 /* Main.storyboard */,
+				4A2FB0321E3E203B00BDFC92 /* FunctionViewController.swift */,
+				4A931CE01E7701E1006B37B0 /* functionListCell.swift */,
+				4A931CE21E77090A006B37B0 /* DetailFunctionViewController.swift */,
+				4ABDD0281E79855500701458 /* Main.storyboard */,
 				4A1F35E81E3495A10069FEB2 /* Assets.xcassets */,
 				4A1F35EA1E3495A10069FEB2 /* LaunchScreen.storyboard */,
 				4A1F35ED1E3495A10069FEB2 /* Info.plist */,
 				4A1F35E51E3495A10069FEB2 /* PhotoEncUI.xcdatamodeld */,
+				4ABDD02B1E7A581E00701458 /* PhotoEncUI-Bridging-Header.h */,
 			);
 			path = PhotoEncUI;
+			sourceTree = "<group>";
+		};
+		4ABDD02F1E7A59F200701458 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4ABDD0301E7A59F700701458 /* opencv2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4ABDD0321E7A5BDE00701458 /* OpenCV */ = {
+			isa = PBXGroup;
+			children = (
+				4ABDD02E1E7A58DF00701458 /* OpenCVWrapper.h */,
+				4ABDD02C1E7A581E00701458 /* OpenCVWrapper.mm */,
+			);
+			name = OpenCV;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -100,6 +142,7 @@
 					4A1F35DA1E3495A10069FEB2 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 3DL8G3ELDN;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -127,9 +170,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4ABDD02A1E79855500701458 /* Main.storyboard in Resources */,
 				4A1F35EC1E3495A10069FEB2 /* LaunchScreen.storyboard in Resources */,
 				4A1F35E91E3495A10069FEB2 /* Assets.xcassets in Resources */,
-				4A1F35E41E3495A10069FEB2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,28 +184,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A1F35E11E3495A10069FEB2 /* ViewController.swift in Sources */,
+				4A931CE11E7701E1006B37B0 /* functionListCell.swift in Sources */,
 				4A1F35E71E3495A10069FEB2 /* PhotoEncUI.xcdatamodeld in Sources */,
+				4A2FB0311E3C93A700BDFC92 /* scrollImage.swift in Sources */,
+				4A2FB0331E3E203B00BDFC92 /* FunctionViewController.swift in Sources */,
 				4A1F35DF1E3495A10069FEB2 /* AppDelegate.swift in Sources */,
+				4ABDD02D1E7A581E00701458 /* OpenCVWrapper.mm in Sources */,
+				4A931CE31E77090A006B37B0 /* DetailFunctionViewController.swift in Sources */,
+				4A51790A1E8BF85100CC2DFF /* InputImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4A1F35E21E3495A10069FEB2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4A1F35E31E3495A10069FEB2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4A1F35EA1E3495A10069FEB2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				4A1F35EB1E3495A10069FEB2 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		4ABDD0281E79855500701458 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4ABDD0291E79855500701458 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -265,11 +314,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 3DL8G3ELDN;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PhotoEncUI",
+				);
 				INFOPLIST_FILE = PhotoEncUI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Jackthip.PhotoEncUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.FelisDJ.PhotoEncUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PhotoEncUI/PhotoEncUI-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -278,11 +334,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 3DL8G3ELDN;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PhotoEncUI",
+				);
 				INFOPLIST_FILE = PhotoEncUI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Jackthip.PhotoEncUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.FelisDJ.PhotoEncUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PhotoEncUI/PhotoEncUI-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -306,6 +368,7 @@
 				4A1F35F21E3495A10069FEB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
