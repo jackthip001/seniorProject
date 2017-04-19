@@ -16,6 +16,8 @@
 
 +(NSString *) openCVVersion;
 
++(UIImage *)normalizedImage: (UIImage*) image;
+
 +(UIImage *) makeGrayFromImage:(UIImage *)image;
 
 +(UIImage *) enhancementIntensity:(UIImage *)image: (NSInteger) intensity: (NSString*) mode;
@@ -23,6 +25,12 @@
 +(UIImage *) filterMode:(UIImage *) image: (NSString*) mode: (NSInteger) sizeFilter;
 
 +(UIImage *) histogramData:(UIImage *) image ;
+	
++(UIImage *) rotateMode:(UIImage *) image: (double) angle;
+
++(UIImage *) flipMode:(UIImage *) image: (NSString *) axis;
+
++(UIImage *) autoContrast:(UIImage *) image;
 
 @end
 

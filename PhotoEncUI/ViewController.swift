@@ -23,6 +23,10 @@ class ViewController: UIViewController, UIScrollViewDelegate, selectFunctionDele
 		imageToEdit.image = editedImage
 	}
 	
+	override var prefersStatusBarHidden: Bool {
+		return true
+	}
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
@@ -47,6 +51,7 @@ class ViewController: UIViewController, UIScrollViewDelegate, selectFunctionDele
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if segue.identifier == "showFunction" {
+			removeSubview()
 			let functionSelectionView: FunctionViewController = segue.destination as! FunctionViewController
 			functionSelectionView.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
 			functionSelectionView.delegate = self
@@ -56,7 +61,8 @@ class ViewController: UIViewController, UIScrollViewDelegate, selectFunctionDele
 	
 	func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject])
 	{
-		let chosenImage: UIImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+		var chosenImage: UIImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+		chosenImage = OpenCVWrapper.normalizedImage(chosenImage)
 		imageToEdit.contentMode = .scaleAspectFit //3
 		imageToEdit.image = chosenImage //4
 		dismiss(animated:true, completion: nil) //5
@@ -129,6 +135,7 @@ class ViewController: UIViewController, UIScrollViewDelegate, selectFunctionDele
 	}
 	
 	@IBAction func saveImage(_ sender: UIBarButtonItem) {
+		removeSubview()
 		UIImageWriteToSavedPhotosAlbum(imageToEdit.image!, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
 	}
 

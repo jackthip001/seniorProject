@@ -15,10 +15,20 @@ using namespace cv;
 
 @implementation OpenCVWrapper
 
-
 // Here we can use C++ code
--(NSString *) openCVVersion {
++(NSString *) openCVVersion {
 	return [NSString stringWithFormat:@"OpenCV version : %s", CV_VERSION];
+}
+
++(UIImage *)normalizedImage: (UIImage*) image {
+	if (image.imageOrientation == UIImageOrientationUp)
+		return image;
+	
+	UIGraphicsBeginImageContextWithOptions(image.size, NO, image.scale);
+	[image drawInRect:(CGRect){0, 0, image.size}];
+	UIImage *normalizedImage = UIGraphicsGetImageFromCurrentImageContext();
+	UIGraphicsEndImageContext();
+	return normalizedImage;
 }
 
 +(UIImage *) makeGrayFromImage:(UIImage *)image {
@@ -196,6 +206,55 @@ using namespace cv;
 	
 	return MatToUIImage(histogram);
 	
+}
+
+
++(UIImage *) flipMode:(UIImage *) image:(NSString *) axis {
+	Mat imageMat;
+	UIImageToMat(image, imageMat);
+	
+	int axisValue;
+	if ([axis isEqualToString:@"vertical"]) {
+		axisValue = 0;
+	} else if ([axis isEqualToString:@"horizontal"]) {
+		axisValue = 1;
+	}
+	flip(imageMat, imageMat, axisValue);
+	
+	return MatToUIImage(imageMat);
+	
+}
+
++(UIImage *) rotateMode:(UIImage *) image:(double) angle {
+	Mat imageMat;
+	UIImageToMat(image, imageMat);
+	
+	Point2f src_center(imageMat.cols/2.0F, imageMat.rows/2.0F);
+	Mat rot_mat = getRotationMatrix2D(src_center, angle, 1.0);
+	Mat dst;
+	warpAffine(imageMat, dst, rot_mat, imageMat.size());
+	
+	return MatToUIImage(imageMat);
+}
+
++(UIImage *) autoContrast:(UIImage *) image {
+	Mat imageMat;
+	UIImageToMat(image, imageMat);
+	
+	vector<Mat> channels;
+	Mat img_hist_equalized;
+	
+	cvtColor(imageMat, img_hist_equalized, CV_BGR2YCrCb); //change the color image from BGR to YCrCb format
+	
+	split(img_hist_equalized,channels); //split the image into channels
+	
+	equalizeHist(channels[0], channels[0]); //equalize histogram on the 1st channel (Y)
+	
+	merge(channels,img_hist_equalized); //merge 3 channels including the modified 1st channel into one image
+	
+	cvtColor(img_hist_equalized, img_hist_equalized, CV_YCrCb2BGR);
+	
+	return MatToUIImage(img_hist_equalized);
 }
 
 @end
