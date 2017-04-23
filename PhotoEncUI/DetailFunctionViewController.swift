@@ -41,6 +41,10 @@ class DetailFunctionViewController: UIViewController {
 	
 	@IBOutlet weak var histogramIntensity: UIImageView!
 	
+	override var prefersStatusBarHidden: Bool {
+		return true
+	}
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		print(modeSelection.uppercased())

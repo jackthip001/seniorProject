@@ -213,7 +213,7 @@ using namespace cv;
 	Mat imageMat;
 	UIImageToMat(image, imageMat);
 	
-	int axisValue;
+	int axisValue = 0;
 	if ([axis isEqualToString:@"vertical"]) {
 		axisValue = 0;
 	} else if ([axis isEqualToString:@"horizontal"]) {

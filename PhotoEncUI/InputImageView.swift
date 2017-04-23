@@ -33,14 +33,16 @@ class InputImageView: UIView {
 		self.selfViewShow = false
 		
 		buttonGallery = UIButton(frame: CGRect(x: 0, y: 0, width: self.frame.size.width/2, height: self.frame.size.height))
-		buttonGallery.setTitle("Gallery", for: UIControlState.normal)
-		buttonGallery.setTitleColor(.blue, for: UIControlState.normal)
+		buttonGallery.imageView?.contentMode = UIViewContentMode.scaleAspectFit
+		buttonGallery.setImage(#imageLiteral(resourceName: "picture"), for: UIControlState.normal)
+		buttonGallery.imageEdgeInsets = UIEdgeInsetsMake(25, 25, 25, 25)
 		buttonGallery.addTarget(self, action:#selector(chooseImageFromGallery(_:)), for: .touchUpInside)
 		self.addSubview(buttonGallery)
 		
 		buttonCamera = UIButton(frame: CGRect(x: self.frame.size.width/2, y: 0, width: self.frame.size.width/2, height: self.frame.size.height))
-		buttonCamera.setTitle("Camera", for: UIControlState.normal)
-		buttonCamera.setTitleColor(.blue, for: UIControlState.normal)
+		buttonCamera.imageView?.contentMode = UIViewContentMode.scaleAspectFit
+		buttonCamera.setImage(#imageLiteral(resourceName: "photo-camera"), for: UIControlState.normal)
+		buttonCamera.imageEdgeInsets = UIEdgeInsetsMake(25, 25, 25, 25)
 		buttonCamera.addTarget(self, action:#selector(chooseImageFromCamera(_:)), for: .touchUpInside)
 		self.addSubview(buttonCamera)
 		
